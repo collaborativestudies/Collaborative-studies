@@ -1,39 +1,126 @@
+/* Import a warm, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f8f8f8;
+    background: #FAF3E0; /* Warm beige background */
+    color: #4B3A30; /* Soft brown text */
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background: #6B4F4F; /* Warm neutral brown */
+    padding: 15px 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-    background: #333;
     margin: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #FAF3E0; /* Light warm color for contrast */
+    font-weight: 600;
+    font-size: 16px;
     padding: 10px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 20px;
+    background: #EAD7BB; /* Soft warm tan */
+    border-bottom: 5px solid #6B4F4F;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    color: #6B4F4F;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: left;
     display: inline-block;
+    margin: auto;
+    padding: 0;
+    list-style: none;
 }
 
-.hero, .cohort-info, .get-involved, .contact {
-    text-align: center;
-    padding: 50px;
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
 }
 
+/* Rounded Button */
 .btn {
-    background: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
     display: inline-block;
+    background: #6B4F4F; /* Deep warm brown */
+    color: #FAF3E0;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #523B3B; /* Slightly darker brown */
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    background: #EAD7BB; /* Warm tan */
+    padding: 40px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 }
