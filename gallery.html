@@ -13,8 +13,8 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="cohort.html">Collaborative Cohort</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -24,16 +24,46 @@
     <h1>Collaborative Studies Photo Gallery</h1>
     <p>A look at the moments we've shared together.</p>
 
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="photo1.jpg" alt="Collaborative Group">
+        </div>
+        <div class="slide fade">
+            <img src="photo2.jpg" alt="Bible Study">
+        </div>
+        <div class="slide fade">
+            <img src="photo3.jpg" alt="Worship Night">
+        </div>
+        <div class="slide fade">
+            <img src="photo4.jpg" alt="Small Group">
+        </div>
+        <div class="slide fade">
+            <img src="photo5.jpg" alt="Prayer Gathering">
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Thumbnail Images -->
     <div class="gallery-container">
-        <img src="IMG_9917.HEIC" alt="Collaborative Group" class="gallery-image">
-        <img src="IMG_7931.HEIC" alt="Bible Study" class="gallery-image">
-        <img src="IMG_7803.HEIC" alt="Worship Night" class="gallery-image">
-        <img src="IMG_6713.HEIC" alt="Small Group" class="gallery-image">
-        <img src="IMG_5930.HEIC" alt="Prayer Gathering" class="gallery-image">
-        <img src="IMG_5239.JPG" alt="Prayer Gathering" class="gallery-image">
-        <img src="IMG_4108.JPEG" alt="Collaborative Group" class="gallery-image">
+        <img src="photo1.jpg" class="gallery-image" onclick="openFullscreen('photo1.jpg')">
+        <img src="photo2.jpg" class="gallery-image" onclick="openFullscreen('photo2.jpg')">
+        <img src="photo3.jpg" class="gallery-image" onclick="openFullscreen('photo3.jpg')">
+        <img src="photo4.jpg" class="gallery-image" onclick="openFullscreen('photo4.jpg')">
+        <img src="photo5.jpg" class="gallery-image" onclick="openFullscreen('photo5.jpg')">
     </div>
 </section>
+
+<!-- Fullscreen Image Viewer -->
+<div id="fullscreenViewer" class="fullscreen">
+    <span class="close" onclick="closeFullscreen()">&times;</span>
+    <img id="fullscreenImg">
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
