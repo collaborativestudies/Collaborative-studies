@@ -181,12 +181,28 @@ ul li {
     background: #EAD7BB; /* Warm background in case image doesn't fill */
 }
 
-/* Ensure Images Stay Within Aspect Ratio */
+/* Ensure uniform image sizing in slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 90%;
+    height: 450px; /* Fixed aspect ratio */
+    margin: auto;
+    overflow: hidden;
+    background: #EAD7BB; /* Background in case image doesn’t fully cover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make all images fit properly */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This makes sure the image fills the area without stretching */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
     border-radius: 10px;
+    display: block;
+}
+
 }
 
 }
