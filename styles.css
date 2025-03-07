@@ -548,3 +548,74 @@ nav ul li a {
         max-width: 80%;
     }
 }
+/* Sidebar Navigation */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background: #6B4F4F; /* Warm brown */
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    color: #FAF3E0;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    background: #523B3B;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #FAF3E0;
+    cursor: pointer;
+}
+
+/* Menu Toggle Button (for mobile) */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #6B4F4F;
+    cursor: pointer;
+    display: none;
+}
+
+/* Show menu button only on smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide default navigation menu on mobile */
+    nav ul {
+        display: none;
+    }
+}
