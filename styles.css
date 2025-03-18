@@ -558,3 +558,34 @@ nav ul li a {
         display: none; /* Hides normal nav on mobile */
     }
 }
+/* Mobile-Friendly Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6B4F4F;
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
