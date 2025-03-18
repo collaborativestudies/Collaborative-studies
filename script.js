@@ -5,5 +5,5 @@ function openSidebar() {
 
 // Function to close the sidebar
 function closeSidebar() {
-    document.getElementById("sidebar").style.left = "-250px";
+    document.getElementById("sidebar").style.left = "-260px";
 }
