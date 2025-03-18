@@ -552,15 +552,17 @@ nav ul li a {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Hidden by default */
+    left: -260px; /* Start hidden */
     width: 250px;
     height: 100%;
     background: #6B4F4F; /* Warm brown */
-    transition: left 0.3s ease;
-    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+    z-index: 1000; /* Ensures it appears on top */
 }
 
+/* Sidebar List */
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -595,7 +597,7 @@ nav ul li a {
     cursor: pointer;
 }
 
-/* Menu Toggle Button (for mobile) */
+/* Menu Toggle Button */
 .menu-toggle {
     position: fixed;
     top: 15px;
@@ -605,17 +607,21 @@ nav ul li a {
     border: none;
     color: #6B4F4F;
     cursor: pointer;
-    display: none;
+    z-index: 1100; /* Ensures button stays above content */
 }
 
-/* Show menu button only on smaller screens */
+/* Show Sidebar When Active */
+.sidebar-active {
+    left: 0 !important;
+}
+
+/* Mobile-Only Styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
-    /* Hide default navigation menu on mobile */
     nav ul {
-        display: none;
+        display: none; /* Hides normal nav on mobile */
     }
 }
