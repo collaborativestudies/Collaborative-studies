@@ -548,34 +548,42 @@ nav ul li a {
         max-width: 80%;
     }
 }
-/* Mobile-Friendly Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Clean and centered navigation bar */
+nav {
+  background: #FAF3E0;
+  padding: 20px 0;
+  text-align: center;
 }
 
-nav ul li {
-    margin: 5px 15px;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #6B4F4F;
-    font-size: 18px;
-    padding: 8px 12px;
+  text-decoration: none;
+  color: #6B4F4F;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.2s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
+nav ul li a:hover {
+  color: #A9746E;
+}
 
-    nav ul li {
-        margin: 10px 0;
-    }
+/* Responsive behavior */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
