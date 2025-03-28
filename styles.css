@@ -548,16 +548,6 @@ nav ul li a {
         max-width: 80%;
     }
 }
-/* Mobile-Only Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none; /* Hides normal nav on mobile */
-    }
-}
 /* Mobile-Friendly Navigation */
 nav ul {
     list-style: none;
